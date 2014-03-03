@@ -289,6 +289,12 @@ If the regular JSON content-type is returned, then it is RECOMMENDED that the se
 Link: <http://iiif.io/api/image/1.2/context.json>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"
 ```
 
+Servers SHOULD send the Access-Control-Allow-Origin header with the value \* in response to information requests. The syntax is shown below and is described int the [CORS][41] specification. This header is required in order to allow the JSON responses to be used by Web applications hosted on different servers.
+
+```
+Access-Control-Allow-Origin: *
+```
+
 ### 5.1. Image Information Request
 
 The service MUST return technical information about the requested image. The request for technical information MUST conform to the URI Template:
@@ -519,3 +525,4 @@ Many thanks to Matthieu Bonicel, Kevin Clarke, Mark Patton, Lynn McRae, Willy Me
    [38]: http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld# NOTE: THIS IS A WORKING DRAFT. For the latest public release, see [http://iiif.io/api/image/1.1/][36]
    [39]: http://iiif.io#capabilities-request
    [40]: http://iiif.io#url-syntax-capabilities-request
+   [41]: http://www.w3.org/TR/cors/
