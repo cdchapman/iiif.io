@@ -211,14 +211,14 @@ For non-90-degree rotations the API does not specify the background color.
 
 ###  4.4. Quality
 
-The quality parameter determines the bit-depth of the delivered image. The quality value of "native" requests an image of the same bit-depth as the source image. Values other than "native" are requested transformations of the bit-depth of the source image.
+The quality parameter determines the tonality***(?????)*** of the delivered image. The quality value of "native" requests an image that is of the quality the sever deems the best available. This is likely--but not required--to be the same quality as the source image.
 
-| Quality | Parameter Returned |
-| ------- | ------------------ |
-| native | The image is returned at an unspecified bit-depth. |
-| color  | The image is returned in full color, typically using 24 bits per pixel. |
-| grey   | The image is returned in greyscale, where each pixel is black, white or any degree of grey in between, typically using 8 bits per pixel. |
-| bitonal | The image returned is bitonal, where each pixel is either black or white, using 1 bit per pixel when the format permits. This specification makes no recommendation regarding the algorithm that should be used to make image bitonal. |
+| Quality | Description |
+| ------- | ----------- |
+| native  | The image is in the quality the server deems best. |
+| color   | The image is returned in color. |
+| grey    | The image is returned in greyscale, where each pixel is black, white or any degree of grey in between. |
+| bitonal | The image returned is bitonal, where each pixel is either black or white. This specification makes no recommendation regarding the algorithm that should be used to make image bitonal. |
 
 Examples:
 
